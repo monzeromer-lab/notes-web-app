@@ -1,17 +1,13 @@
-const config = require("../config/keys.json").database;
-const { Sequelize } = require("sequelize");
+const SQL = require('mysql');
 
-const sequelize = new Sequelize(config.database, config.user, config.password, {
-    host: config.host,
-    dialect: config.type,
-    logging: false,
-    pool: {
-      max: 30,
-      min: 0,
-      acquire: 30000,
-      idle: 10000
-    }
-  });
+const db = SQL.createPool({
+  host: 'localhost',
+  password: '',
+  user: 'root',
+  database: 'auth',
+  connectionLimit: 30
+});
 
-module.exports = sequelize;
+
+module.exports = db;
 
