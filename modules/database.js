@@ -10,4 +10,3 @@ const db = SQL.createPool({
 
 
 module.exports = db;
-
