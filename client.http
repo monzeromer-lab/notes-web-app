@@ -12,9 +12,9 @@ POST http://localhost:3000/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "monzersmiledev@gmail.com",
+    "email": "wizmgbrown@gmail.com",
     "password": "password123",
-    "username": "monzeromer",
+    "username": "smiledevsd",
     "firstName": "Monzer",
     "lastName": "Omer"
 }

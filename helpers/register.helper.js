@@ -1,3 +1,6 @@
+const bcrypt = require("bcryptjs");
+const db = require('../modules/database');
+
 module.exports.register = async (req, res, next) => {
 
     db.query(`select username from users where username = ${db.escape(req.body.username)}`, (err, result) => {
